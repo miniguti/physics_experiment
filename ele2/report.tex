@@ -1,0 +1,718 @@
+\documentclass{jarticle}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+\usepackage[truedimen, margin=25mm]{geometry}
+
+
+
+
+\begin{document}
+
+%\setlength{\oddsidemargin}{-5mm}
+%\setlength{\evensidemargin}{-5mm}
+%\setlength{\textwidth}{500pt}
+
+\title{エレクトロニクス2}
+\author{川口廣伊智 (学籍番号:05171523) \\ 共同実験者氏名 越智昌毅 丸山義輝 }
+\date{実験日 \\ 2017/04/27, 05/1, 8, 10, 11, 17}
+\maketitle
+
+
+\section{実験1}
+
+\subsection{実験方法}
+100k$\Omega$(精度$\pm$10パーセント)の抵抗の抵抗値をテスターで10回測定した。
+
+
+\subsection{実験結果}
+結果は以下のようになった。(単位はk$\Omega$)
+\begin{equation}
+\begin{cases}
+平均値 99.93 \\
+標準偏差 0.10
+\end{cases} 
+\end{equation}
+
+ばらつきはあるが公差ほどばらついていなかった。
+
+
+\section{実験2}
+
+\subsection{実験方法}
+
+信号発生器の出力(正弦波、三角波、方形波)をスピーカーに入力して音を発生させた。
+
+\subsection{実験結果}
+波形によって音色が異なっていた。
+
+
+
+
+\section{実験3}
+
+\subsection{実験方法}
+異なる時定数を持つ2つの積分回路を用いてそれぞれの入力電圧、出力電圧の振幅比及び位相差の周波数特性を調べた。そのために以下の図のような積分回路を作製した。
+出力をオシロスコープに取り込み、画面に表示された信号から入力電圧、出力電圧の振幅を読み取った。読み取り方は信号の山の電位と谷の電位の差の0.5倍を振幅とし、
+オシロスコープに出力される信号の線がノイズにより有限の幅を持っているように見えるためこの線の太さ分の電圧を誤差とした。さらに振幅比を求めるため、
+振幅比の誤差は上のように読み取った入力電圧、出力電圧の誤差から誤差伝播により求めた。また、入力電圧、出力電圧の中心電圧をオシロスコープの
+画面上で等しくなるように設定し、中心電圧と信号線の交点の時間差を読み取った。中心電圧をそろえることで系統誤差を小さくすることが出来る。位相差はその時間差に入力信号の角周波数をかけたものとした。電圧の誤差と
+同様に信号線の太さを読み取りこの値に角周波数をかけたものを位相差の誤差とした。
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/integral_circuit_1.png}
+ \caption{時定数100$\mu$sec積分回路の回路図。}
+ \end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/integral_circuit_2.png}
+ \caption{時定数10$\mu$sec積分回路の回路図。}
+ \end{center}
+\end{figure}
+
+
+
+
+\subsection{実験結果}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{integral_circuit.eps}
+ \caption{時定数100$\mu$secの積分回路の振幅比の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 誤差の範囲内で測定値と理論値が一致していた。}
+ \end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/integral_circuit_phase_1.eps}
+ \caption{時定数100$\mu$secの積分回路の位相差の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 低周波領域で測定値が理論値と一致していなかった。高周波領域では一致していた。}
+ \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/integral_circuit_2.eps}
+ \caption{時定数10$\mu$secの積分回路の振幅比の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 誤差の範囲内で測定値と理論値が一致していた。}
+ \end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/integral_circuit_phase_2.eps}
+ \caption{時定数10$\mu$secの積分回路の位相差の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 誤差の範囲内で測定値と理論値が一致していた。}
+ \end{center}
+\end{figure}
+
+
+
+%誤差をどうとったのか明記する(誤差伝播云々)
+%結果に理論との一致不一致を記しておくべき
+
+%\subsection{考察}
+
+%誤差を小さくする云々の議論
+%実用的な回路かどうか(ローパスとか)
+%理論線と一致しない場合の原因の追究
+
+\section{実験4}
+
+\subsection{実験方法}
+実験3で積分回路に対して行った測定を微分回路に対しても同様に行った。信号の電圧、位相差、またそれらの誤差の読み取りも同様である。
+
+
+\subsection{実験結果}
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/diff_circuit.eps}
+ \caption{時定数100$\mu$secの微分回路の振幅比の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 誤差の範囲内で測定値と理論値が一致していた。}
+ \end{center}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/diff_circuit_phase.eps}
+ \caption{時定数100$\mu$secの微分回路の位相差の周波数特性。黒の実線は理論線、黒の離散点は測定点を表す。
+ 誤差の範囲内で測定値と理論値が一致していた。}
+ \end{center}
+\end{figure}
+
+
+
+
+
+%誤差を小さくする云々の議論
+%実用的な回路かどうか(ローパスとか)
+%理論線と一致しない場合の原因の追究
+
+
+
+\section{実験5}
+
+
+\subsection{実験方法}
+実験3で積分回路に対して行った測定を共鳴回路に対しても同様に行った。
+
+\clearpage
+
+\begin{figure}
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/resonance_circuit.png}
+ \caption{共鳴回路の回路図。内部抵抗も考慮した。}
+ \end{center}
+\end{figure}
+
+
+
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{program/ex_5/reso_amp.eps}
+ \caption{共鳴回路の入出力電圧振幅比の周波数特性。結果からピークは少なくとも15から15.9kHzの間にありその値は少なくとも576mVよりも大きいということが分かる。}
+ \end{center}
+\end{figure}
+
+
+
+\clearpage
+
+\begin{figure}
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{program/ex_5/reso_phase.eps}
+ \caption{共鳴回路の入出力電圧の位相差の周波数特性。}
+ \end{center}
+\end{figure}
+
+
+
+\clearpage
+
+
+
+
+%pspiceの出力に書き込むかあ
+
+%\subsection{考察}
+
+%誤差を小さくする云々の議論
+%実用的な回路かどうか(ローパスとか)
+%理論線と一致しない場合の原因の追究
+%内部抵抗の影響の理論的考察
+
+\section{実験6}
+
+\subsection{実験方法}
+信号発生器から実験4で作製した微分回路へ波長の長い方形波を入力し、出力の波形をオシロスコープで読み取った。
+
+次に、オシロスコープのACモードのハイパスフィルタの時定数の推定を行うために、
+信号発生器からの8Hzの方形波をオシロスコープのACモードで観察し画面から出力の波形を読み取り、時定数を推定した。
+
+いずれの測定も誤差はオシロスコープに表示されているノイズによって生ずる信号線の太さである。
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{出力が時間の関数としてセミロググラフ上で直線になることが確認された。
+ 微分回路の時定数が100$\mu$secであった。またグラフから読み取れる時定数は100$\mu$secで定量的に理論値との一致が確かめられた。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{オシロスコープの時定数はグラフから22.50$\pm$0.25msと読み取れる。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+%過渡特性を確認できた。
+%オシロの時定数
+
+
+
+
+
+
+
+\section{実験7}
+
+\subsection{実験方法}
+
+共鳴回路に方形波を入力し出力電圧波形をオシロスコープで観測した。
+
+
+
+
+
+\subsection{実験結果}
+以下のグラフから
+周期:64.0$\pm$0.1[$\mu$sec]
+時定数:100$\pm$5[$\mu$sec]
+と読み取れる。
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{オシロスコープの表示図から読み取ってプロットした。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+
+\section{実験8}
+
+\subsection{実験方法}
+
+次のようなダイオードの回路を作製した。$V_0$に直流電源を与え$V_1$の電圧を測定。
+測定値から計算した電流の値とV_0の値をグラフにして表した。
+また、ダイオードの電流の温度依存性も調べた。
+いずれの電圧値の測定もテスターで行ったので誤差は小さいとして省略した。
+
+\begin{figure}
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/diode.png}
+ \caption{ダイオードの電圧電流特性の測定回路}
+ \end{center}
+\end{figure}
+
+
+
+
+\subsection{実験結果}
+
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{ダイオードの電気特性をリニアプロットで表したグラフ。指数関数的な増加に見えるが
+ 線形プロットでは判断が下せない}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{ダイオードの電気特性をセミログプロットで表したグラフ。セミログプロットで
+ 直線になることから電流が電圧の指数関数で増加することが確かめられた。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+ダイオードをはんだごてで温めた後は前と比べて電流の増加が確認された。これにより電流が温度に依存していることが確かめられた。
+
+
+
+
+
+
+\section{実験9}
+
+
+
+\subsection{実験方法}
+
+実験8でダイオードに対して行った測定をトランジスタのベースエミッタ間、ベースコレクタ間に対しても行った。
+実験8と同様の理由により誤差は省略した。
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/transistor_be.png}
+ \caption{トランジスタのベースエミッタ間の電圧電流特性の測定回路}
+ \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/transistor_bc.png}
+ \caption{トランジスタのベースコレクタ間の電圧電流特性の測定回路}
+ \end{center}
+\end{figure}
+
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{電流が電圧の指数関数的に増加するダイオード的な電気特性が確認された。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{電流が電圧の指数関数的に増加するダイオード的な電気特性が確認された。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+
+\section{実験10}
+
+\subsection{実験方法}
+
+
+
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/switching.png}
+ \caption{エミッタ接地のトランジスタ回路。}
+ \end{center}
+\end{figure}
+
+上図の回路を用いて様々な大きさの直流電位を$V_0$にかけた時のベース電位$V_B$、エミッタ電位$V_E、コレクタ電位$W$を測定し、$V_B-V_EとW$の関係をグラフにした。
+各電位はテスターでの測定故、誤差は省略した。
+
+
+\subsection{実験結果}
+
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{出力直流電位$W$とベースエミッタ間の電位差$V_B-V_E$の関係のグラフ。
+ グラフから$V_B - V_E = 0.65\pm0.05$でスイッチングの現象が確認された。}
+ \end{center}
+\end{figure}
+
+
+
+\clearpage
+
+
+
+
+\section{実験11}
+
+\subsection{実験方法}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/amp.png}
+ \caption{エミッタ接地増幅回路。}
+ \end{center}
+\end{figure}
+
+上図の回路を用いて次のような実験を行った。
+
+まず、入力端子に電圧Vをかけてコレクタ電位$W$、ベース電位$V_B$、エミッタ電位$V_E$を測定し、$W$と$V_B-V_E$の関係をグラフにした。テスターでの測定故、誤差は省略している。
+
+次に、信号発生器から入力端子に正弦波を入力し出力電圧、入力電圧の振幅比の周波数特性を調べた。
+
+
+
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{出力直流電位$W$とベースエミッタ間の電位差$V_B-V_E$の関係のグラフ。実験10の結果と一致しているように見える。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{電圧ゲインの周波数特性。積分回路のようにローパスの振る舞いを見せた。低周波領域でゲインが4.82で
+ 抵抗比$R_L/R_B=4.30$なのであるが誤差がだいたい～0.1なので一致しているとは言えない。 }
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+%\subsection{考察}
+
+
+
+\section{実験12}
+
+\subsection{実験方法}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/amp_ap.png}
+ \caption{エミッタフォロワと負のフィードバックを用いた増幅回路。}
+ \end{center}
+\end{figure}
+
+上図の回路を作製し、信号発生器から入力端子に正弦波を入力し、出力電圧、入力電圧の振幅比の周波数特性を調べた。
+誤差はオシロスコープに表示されるノイズによる信号線の太さを読み取り、誤差伝播で算出した。
+
+
+
+
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{二段階の微分特性が確認できた。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+\section{実験13}
+
+\subsection{実験方法}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/opamp_1.png}
+ \caption{抵抗比5.1の反転増幅器。}
+ \end{center}
+\end{figure}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/opamp_2.png}
+ \caption{抵抗比50の反転増幅器。}
+ \end{center}
+\end{figure}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/opamp_3.png}
+ \caption{抵抗比199.3の反転増幅器。}
+ \end{center}
+\end{figure}
+
+上記3つの抵抗比の反転増幅器の周波数特性を調べた。誤差はオシロスコープ上のノイズによる信号線の太さである。
+
+
+
+\subsection{実験結果}
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{3種類の抵抗比の反転増幅器の出力電圧の周波数特性を重ねてプロットした。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+
+%\subsection{考察}
+
+
+
+
+
+\section{実験14(シュミットトリガー)}
+
+\subsection{実験方法}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/schmidt.png}
+ \caption{シュミットトリガの回路図}
+ \end{center}
+\end{figure}
+
+上図の回路を作製し、シュミットトリガ回路の動作を確認した。
+
+
+
+
+
+
+\subsection{実験結果}
+シュミットトリガの出力の履歴現象が確認できた。
+
+
+
+
+\section{実験14(太陽電池)}
+
+\subsection{実験方法}
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/solar.png}
+ \caption{太陽電池の回路図}
+ \end{center}
+\end{figure}
+
+
+
+
+\subsection{実験結果}
+太陽電池の面を覆う面積を変えることにより、出力が変化することが確かめられた。
+
+
+
+
+
+\section{実験14(マルチバイブレータ)}
+
+\subsection{実験方法}
+まずマルチバイブレータ回路を次のように作製した。
+
+
+\begin{figure}[H]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{image/vib.png}
+ \caption{マルチバイブレータの回路図}
+ \end{center}
+\end{figure}
+
+測定したのはこの回路から発される方形波の周期、振幅、オフセットとLM741のslew rateである。
+誤差はオシロスコープに表示される信号線の太さをとり、slew rateの誤差は方形波の立ち上がり電圧と立ち上がりに要する時間の比の誤差伝播により求めた。
+
+
+
+
+
+\subsection{実験結果}
+
+\subsubsection{マルチバイブレータ}
+オフセット電圧:0.34$\pm$0.05[V]
+
+振幅:14.1$\pm$0.5[V]
+
+周期:2.06$\pm$0.01[ms]
+
+slew rate:0.84$\pm$0.03[V/$\mu$sec]
+
+\clearpage
+
+\begin{figure}[b]
+ \noindent
+ \begin{center}
+ \includegraphics[width=16cm]{hoge.eps}
+ \caption{観測した出力された方形波。}
+ \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
